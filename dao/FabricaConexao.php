@@ -4,13 +4,13 @@ class FabricaConexao {
     private $user = "root";
     private $pass = "usbw";
     private $banco = "ajudamigos";
-    private $conexao = NULL;
+    private $conexao;
 
     function obterConexao() {
         if(!is_null(self::$conexao)) {
-            self::$conexao = mysqli_connect(self::$host, self::$user, self::$pass, self::$banco) or die ("Não foi possível se conectar ao banco.");
+            $this->conexao = mysqli_connect(self::$host, self::$user, self::$pass, self::$banco) or die ("Não foi possível se conectar ao banco.");
         }
-        return self::$conexao;
+        return $this->conexao;
     }
 }
 
