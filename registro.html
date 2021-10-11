@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/style.css">
+    <title>Ajudamigos - Registro</title>
+</head>
+<body>
+    <div class="d-flex p-absolute modal">
+        <div class="form-wrapper">
+            <form action="controller/cadastro.php" method="POST">
+                <input type="text" id="usuario" name="usuario" placeholder="Usuário" required>
+                <input type="text" id="email" name="email" placeholder="Email" required>
+                
+                <input type="password" id="Senha" placeholder="Senha" onkeydown="validarSenha()" required>
+                <input type="password" id="Confirmar_senha" placeholder="Confirmar senha" onkeydown="validarSenha()" required>
+    
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+ 
+let senha = document.getElementById('Senha');
+let senhaC = document.getElementById('Confirmar_senha');
+
+function validarSenha() {
+  if (senha.value != senhaC.value) {
+    senhaC.setCustomValidity("Senhas diferentes!");
+    senhaC.reportValidity();
+    return false;
+  } else {
+    senhaC.setCustomValidity("");
+    return true;
+  }
+}
+
+// verificar também quando o campo for modificado, para que a mensagem suma quando as senhas forem iguais
+senhaC.addEventListener('input', validarSenha);
+
+</script>
+</html>

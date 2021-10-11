@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+:root {
+    --pastel-pink: #f5d3e6;
+    --pastel-purple: #e5d5f5;
+    --pastel-blue: #d5ecf5;
+    --pastel-green: #d5f5e2;
+    --pastel-yellow: #f4f5d5;
+
+    --pastel-warm-pink: #f5918c;
+    --pastel-warm-purple: #e384d1;
+    --pastel-warm-blue: #88ebdd;
+    --pastel-warm-green: #a9f58e;
+    --pastel-warm-yellow: #f3f58e;
+
+    --light: #f2f2f2;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.body {
+    background-color: var(--pastel-blue);
+}
+
+.container {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+} /* Nn de boa */
+
+.header {
+    background-color: var(--pastel-warm-pink);
+    background-image: url(./images/header-bottom-wave.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-logo-wrapper {
+    padding: 16px 0px 85px;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.p-3 {
+    padding: 3%;
+}
+
+.bg-light {
+    background-color: var(--light);
+}
+
+.navbar {
+    background-color: var(--light);
+    display: flex;
+}
+
+.navbar-itens-wrapper {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.navbar-left-wrapper {
+    display: flex;
+}
+
+.navbar-item {
+    color: var(--pastel-warm-purple);
+    padding: 8px;
+    text-decoration: none;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.form-wrapper {
+
+}
+
+.d-flex {
+    display: flex;
+}
+
+.p-absolute {
+    position: absolute;
+}
